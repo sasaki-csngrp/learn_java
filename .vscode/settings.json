@@ -1,6 +1,16 @@
 {
     "java.jdt.ls.vmargs": "-Dfile.encoding=UTF-8 -Dconsole.encoding=UTF-8",
     "java.compile.nullAnalysis.mode": "automatic",
+    "java.project.sourcePaths": [
+        "gof-design-patterns/srcs"
+    ],
+    "java.project.outputPath": "gof-design-patterns/bin",
+    "java.project.referencedLibraries": [],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.configuration.runtimes": [],
+    "java.import.gradle.enabled": false,
+    "java.import.maven.enabled": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
     "terminal.integrated.env.linux": {
         "LANG": "C.UTF-8",
         "LC_ALL": "C.UTF-8",

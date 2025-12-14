@@ -1,3 +1,5 @@
+package P00_01_Encapsulation;
+
 public class BankAccount {
     private double balance;  // データをprivateで隠蔽
     

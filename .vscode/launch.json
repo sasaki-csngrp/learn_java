@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BankAccount",
+            "request": "launch",
+            "mainClass": "P00_01_Encapsulation.BankAccount",
+            "projectName": "learn_java_d3e86a7b"
+        },
+        {
+            "type": "java",
             "name": "Dog",
             "request": "launch",
             "mainClass": "P00_02_Inheritance.Dog",
