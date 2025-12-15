@@ -4,3 +4,13 @@
 # Java class files
 *.class
 bin/
+
+# C program executable files
+a.out
+
+# C program object files
+*.o
+
+# C program library files
+*.lib
+
