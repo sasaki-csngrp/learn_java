@@ -19,3 +19,6 @@ a.out
 
 # Python cache files
 __pycache__/
+
+# TypeScript files
+*.js
