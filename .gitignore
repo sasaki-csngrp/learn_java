@@ -1,6 +1,9 @@
 # VSCode related files
 .vscode/
 
+# Eclipse related files
+.settings
+
 # Java class files
 *.class
 bin/
