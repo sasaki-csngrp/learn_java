@@ -4,9 +4,9 @@
 
 ## 📚 概要
 
-デザインパターンは、ソフトウェア開発において繰り返し発生する問題に対する再利用可能な解決策です。この学習環境では、Javaによる実装を中心に、C言語での類似実装も提供し、異なるプログラミング言語でのパターンの実装方法を比較しながら学習できます。
+デザインパターンは、ソフトウェア開発において繰り返し発生する問題に対する再利用可能な解決策です。この学習環境では、Javaによる実装を中心に、C言語とPythonでの類似実装も提供し、異なるプログラミング言語でのパターンの実装方法を比較しながら学習できます。
 
-将来的には、TypeScriptやPythonでの実装も追加予定です。
+Python版は一部のパターンについて実装済みです。将来的には、TypeScriptでの実装も追加予定です。
 
 ## 💡 なぜ今デザインパターンを学ぶのか？
 
@@ -71,7 +71,8 @@ learn_java/
 ├── gof-design-patterns/
 │   ├── docs/              # 各パターンの詳細なドキュメント
 │   ├── srcs/              # Java実装例
-│   └── cs/                # C言語実装例（基礎概念と一部パターン）
+│   ├── cs/                # C言語実装例（基礎概念と一部パターン）
+│   └── pythons/           # Python実装例（基礎概念と一部パターン）
 └── README.md              # このファイル
 ```
 
@@ -96,6 +97,15 @@ C言語による類似実装です。オブジェクト指向の基礎概念（�
 - `P00_02_Inheritance/` - C言語での継承の実現方法
 - `P00_03_Polymorphism/` - 関数ポインタによるポリモーフィズム
 - `P00_04_Abstraction/` - 抽象化の実現方法
+
+#### `pythons/`
+Pythonによる実装例です。オブジェクト指向の基礎概念と一部のデザインパターンをPythonで実装しています。
+
+- `P00_01_Encapsulation/` - カプセル化の実装例
+- `P00_02_Inheritance/` - 継承の実装例
+- `P00_03_Polymorphism/` - ポリモーフィズムの実装例
+- `P00_04_Abstraction/` - 抽象化の実装例
+- `P01_Singleton/` - シングルトンパターンの実装例
 
 ## 🗂️ GoFデザインパターン一覧
 
@@ -166,9 +176,27 @@ gcc -o BankAccount BankAccount.c
 ./BankAccount
 ```
 
+#### Pythonの実行例
+
+```bash
+cd gof-design-patterns/pythons/P00_01_Encapsulation
+python3 BankAccount.py
+```
+
+#### TypeScriptの実行例
+
+```bash
+# TypeScriptをコンパイル
+cd gof-design-patterns/typescripts/P00_01_Encapsulation
+tsc BankAccount.ts
+
+# 実行
+node BankAccount.js
+```
+
 ### 4. 比較学習
 
-JavaとC言語の実装を比較することで、パターンの本質をより深く理解できます。
+Java、C言語、Python、TypeScriptの実装を比較することで、パターンの本質をより深く理解できます。
 
 ## 📖 各パターンの学習方法
 
@@ -187,16 +215,63 @@ JavaとC言語の実装を比較することで、パターンの本質をより
 3. **C言語実装** (`cs/P00_XX/`) - 基礎概念のみ
    - オブジェクト指向の概念をC言語で実現する方法
 
+4. **Python実装** (`pythons/P00_XX/`, `pythons/P01_XX/`) - 基礎概念と一部パターン
+   - オブジェクト指向の概念とデザインパターンをPythonで実装
+
 ## 🔧 必要な環境
 
-- **Java**: JDK 8以上（Java実装の実行に必要）
-- **C言語**: GCC（C言語実装の実行に必要）
+### インストール済みの環境
+
+- **Java**: JDK 21 LTS（Java実装の実行に必要）
+- **C言語**: build-essential（GCC等を含む、C言語実装の実行に必要）
+- **Python**: 3.12.3（Ubuntuにバンドル、Python実装の実行に必要）
+- **Node.js**: 24.x LTS（TypeScript実装の実行に必要）
+- **TypeScript**: （TypeScript実装の実行に必要）
 - **Markdownビューア**: ドキュメントの閲覧に推奨
+
+### インストール方法
+
+#### Java 21 LTS
+```bash
+# Ubuntu/Debianの場合
+sudo apt update
+sudo apt install openjdk-21-jdk
+```
+
+#### C言語（build-essential）
+```bash
+# Ubuntu/Debianの場合
+sudo apt update
+sudo apt install build-essential
+```
+
+#### Python 3.12.3
+```bash
+# Ubuntuにバンドルされている場合は追加インストール不要
+# バージョン確認
+python3 --version
+```
+
+#### Node.js 24.x LTS と TypeScript
+```bash
+# Node.js 24.x LTSとTypeScriptをインストール
+curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
+sudo apt update
+sudo apt install nodejs
+
+# TypeScriptをグローバルにインストール
+sudo npm install -g typescript
+
+# インストール確認
+node -v
+npm -v
+tsc -v
+```
 
 ## 📝 今後の拡張予定
 
 - [ ] TypeScriptでの実装例
-- [ ] Pythonでの実装例
+- [ ] Python版の追加実装（残りのパターン）
 - [ ] より詳細な実践例とユースケース
 - [ ] パターンの組み合わせ例
 
